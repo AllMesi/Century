@@ -1,6 +1,3 @@
-
-console.clear()
-
 const config = require('../config');
 const Client = require("./structures/Client")
 const client = new Client();

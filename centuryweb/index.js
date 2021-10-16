@@ -16,4 +16,4 @@ express()
 .use(function(req, res, err) {res.status(500).render(__dirname + '/views/pages/500', {ERROR: err.message})})
 .use(function(req, res){res.status(404).render(__dirname + '/views/pages/404', { url: req.url })})
 .use('/static', express.static(__dirname + '/public'))
-.listen(port, () => {console.log(`Website running on port ${port}`)});
+.listen(port, () => {console.log(`Website running on port ${port} `)});

@@ -20,7 +20,7 @@ class Client extends discord.Client {
       const command = require(`../commands/${file}`)
       console.log(`Fetched Command ${command.name}.`)
       this.commands.set(command.name, command);
-      this.prefix = config.general.prefix;
+      this.prefix = config.general.prefix2;
     })
 
 		fs.readdirSync("./centurybot/events")
@@ -34,7 +34,7 @@ class Client extends discord.Client {
 				this.on(event.event, event.run.bind(null, this));
 			});
 
-    this.login(process.env.token)
+    this.login(process.env.token2)
   }
 }
 

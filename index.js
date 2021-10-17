@@ -1,2 +1,3 @@
-require('./centurybot/index')
-require('./centuryweb/index')
+require("./centurybot/index");
+// require("./centurybotdev/index");
+require("./centuryweb/index");

@@ -1,7 +1,7 @@
 const discord = require("discord.js");
 const intents = new discord.Intents(32767);
 const fs = require("fs");
-const config = require('../../config');
+const config = require('../../data/conf');
 const Event = require("./Event.js");
 class Client extends discord.Client {
   constructor() {
@@ -13,7 +13,7 @@ class Client extends discord.Client {
   }
 
   start(token) {
-    fs.readdirSync("./centurybot/commands").filter(file => file.endsWith(".js")).forEach(file => {
+    fs.readdirSync("./botic/commands").filter(file => file.endsWith(".js")).forEach(file => {
       /**
        * @type {Command}
        */
@@ -23,7 +23,7 @@ class Client extends discord.Client {
       this.prefix = config.general.prefix;
     })
 
-		fs.readdirSync("./centurybot/events")
+		fs.readdirSync("./botic/events")
 			.filter(file => file.endsWith(".js"))
 			.forEach(file => {
 				/**

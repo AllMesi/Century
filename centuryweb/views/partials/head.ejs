@@ -4,6 +4,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="/css/index.css">
+<script>
+  const btn = document.querySelector("codeNOBOOTBUTTON");
+if (btn) {
+  btn.onclick = function() {
+    btn.classList.toggle("dipped");
+  };
+}
+</script>
 <style>
 
     /* html {
@@ -23,12 +31,12 @@
         background: grey;
         border: solid grey 4px;
         border-radius: 5px;
+        transition: .2s;
     }
     codeNOBOOTBUTTON:hover {
         color: white;
         cursor: pointer;
         border: solid black 4px;
-        
     }
     .dark {
         background-color: #222;
@@ -44,9 +52,6 @@
         border-radius: 5px;
         float: right;
     }
-
-    
-
     .loader-wrap {
         width: 100%;
         height: 100%;
@@ -95,30 +100,11 @@
     transform: rotate(360deg);
   }
 }
-
-/* @keyframes loader-inner {
-  0% {
-    height: 0%;
-  }
-  
-  25% {
-    height: 0%;
-  }
-  
-  50% {
-    height: 100%;
-  }
-  
-  75% {
-    height: 100%;
-  }
-  
-  100% {
-    height: 0%;
-  }
-} */
 .content {
     color: transparent
+}
+.dipped {
+  transform: translateY(5px);
 }
 
 </style>

@@ -3,16 +3,15 @@ const discord = require('discord.js')
 
 module.exports = new Command({
     name: "changelog",
-    description: "a log that says the changes",
-
+    description: "a log that logs the changes",
+    permission: "SEND_MESSAGES",
     async run(message, args, client) {
         const embed = new discord.MessageEmbed()
         .setTitle('Changelog')
-        .setDescription('**- Literally nothing**')
+        .setDescription('**- CenturyBot turns into Botic again\n- (In Progress) Adding slash commands**')
         .setThumbnail(client.user.avatarURL())
         .setTimestamp();
 
         message.reply({ embeds: [embed] })
     }
-
 })

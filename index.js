@@ -1,3 +1,3 @@
-require("./centurybot/index");
-// require("./centurybotdev/index");
+require("./botic/index");
+// require("./boticdev/index");
 require("./centuryweb/index");

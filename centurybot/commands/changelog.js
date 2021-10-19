@@ -6,10 +6,11 @@ module.exports = new Command({
     description: "a log that says the changes",
 
     async run(message, args, client) {
-        const embed = new discord.MessageEmbed({ timestamp: new Date() })
-        .setAuthor(message.author.tag, message.author.avatarURL({ dynamic: true }))
+        const embed = new discord.MessageEmbed()
         .setTitle('Changelog')
-        .setDescription('**- Added slash commands**');
+        .setDescription('**- Literally nothing**')
+        .setThumbnail(client.user.avatarURL())
+        .setTimestamp();
 
         message.reply({ embeds: [embed] })
     }

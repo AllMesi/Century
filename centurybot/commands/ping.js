@@ -2,7 +2,7 @@ const Command = require('../structures/Command')
 
 module.exports = new Command({
     name: "ping",
-    description: "latency",
+    description: "yes i wa s wondering if u could play tghat song again\nhmm which one man\nthe one that goes DSHFLKJDFLKJDFLKJFLKJFSDFSDF",
 
     async run(message, args, client) {
         const msg = await message.reply('Pinging...')

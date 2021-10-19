@@ -3,7 +3,7 @@ const config = require('../../config')
 
 module.exports = new Command({
     name: "eval",
-    description: "hi",
+    description: "EvalaUATION",
 
     async run(message, args, client)
     {

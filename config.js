@@ -7,7 +7,7 @@ module.exports = {};
 module.exports.general = {
   prefix: "c/",
   prefix2: "c.",
-  guildId: 898055567464071222,
+  guildId: 899499905796681758,
   clientId: 809298692845731841,
 };
 

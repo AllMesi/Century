@@ -12,7 +12,7 @@ module.exports.general = {
 
 module.exports.dev = {
   owners: '639406418252005385',
-  eval: false
+  eval: true
 };
 
 module.exports.private = {

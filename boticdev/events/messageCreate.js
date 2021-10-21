@@ -5,13 +5,16 @@ module.exports = new Event("messageCreate", (client, message) => {
 
   if (message.author.bot) return;
 
-  if (!message.content.startsWith(client.prefix)) return;
+  if (!message.content.startsWith(require('../../data/conf').general.prefix2)) return;
 
-  const args = message.content.substring(client.prefix.length).split(/ +/);
+  const args = message.content.substring(require('../../data/conf').general.prefix2.length).split(/ +/);
 
   const command = client.commands.find(cmd => cmd.name == args[0]);
 
   if (!command) return message.reply("That command isnt valid");
 
   command.run(message, args, client)
+  
+  const permission = message.member.permissions.has(command.permission)
+  if (!permission) return message.reply(`YOU DO NOT HAVE THE PERMISSION \`${command.permission}\``)
 });

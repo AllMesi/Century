@@ -13,24 +13,24 @@ class Client extends discord.Client {
   }
 
   start(token) {
-    fs.readdirSync("./botic/commands").filter(file => file.endsWith(".js")).forEach(file => {
+    fs.readdirSync("./boticdev/commands").filter(file => file.endsWith(".js")).forEach(file => {
       /**
        * @type {Command}
        */
       const command = require(`../commands/${file}`)
       console.log(`Fetched Command ${command.name}.`)
       this.commands.set(command.name, command);
-      this.prefix = config.general.prefix2;
+      this.prefix = config.general.prefix;
     })
 
-		fs.readdirSync("./botic/events")
+		fs.readdirSync("./boticdev/events")
 			.filter(file => file.endsWith(".js"))
 			.forEach(file => {
 				/**
 				 * @type {Event}
 				 */
 				const event = require(`../events/${file}`);
-				console.log(`Event ${event.event} loaded`);
+				console.log(`Fetched event ${event.event}.`);
 				this.on(event.event, event.run.bind(null, this));
 			});
 

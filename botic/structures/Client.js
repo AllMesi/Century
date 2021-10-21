@@ -30,7 +30,7 @@ class Client extends discord.Client {
 				 * @type {Event}
 				 */
 				const event = require(`../events/${file}`);
-				console.log(`Event ${event.event} loaded`);
+				console.log(`Fetched event ${event.event}.`);
 				this.on(event.event, event.run.bind(null, this));
 			});
 
